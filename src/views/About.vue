@@ -1,6 +1,8 @@
 <template>
   <div>
+    <!-- 颜色组件 -->
     <Color></Color>
+    <!-- 模式组件 -->
     <Theme></Theme>
   </div>
 </template>

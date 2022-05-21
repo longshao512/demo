@@ -27,7 +27,7 @@
         </tr>
       </tbody>
     </table>
-    <el-dialog title="修改信息" :visible.sync="dialogVisible_T" width="30%">
+    <el-dialog title="修改信息" :visible.sync="dialogVisible_T" width="50%">
       <el-form ref="form" :model="form_T" label-width="80px">
         <el-form-item label="名称">
           <el-input v-model="form_T.text"></el-input>
@@ -143,6 +143,7 @@ export default {
       this.theme[this.map_T.get(this.index_T)] = this.oldform_T;
       this.dialogVisible_T = false;
     },
+    // 不知道宽度和高度怎么验证是否符合标准就加了个正则
     change(value) {
       var str = new RegExp("^(\\d|[1-9]\\d|100)%$");
       var str_s = new RegExp("^(?!00)(?:[0-9]{1,3}|1000)px$");

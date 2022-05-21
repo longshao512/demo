@@ -12,9 +12,8 @@
           <!-- 无动画效果 -->
           <!-- <div :class="{ box: currentClass == index }"></div> -->
         </li>
-         <div class="box" ref="box"></div>
+        <div class="box" ref="box"></div>
       </ul>
-    
     </div>
     <div class="tab_con">
       <!-- is绑定选中tab的内容 -->
@@ -37,13 +36,13 @@ export default {
       // 默认选中tab
       currentTab: "firstTab",
       // 默认选中按钮样式
-      currentClass: 0, 
+      currentClass: 0,
       tabList: [
         {
           // tab文字
-          title: "推荐", 
+          title: "推荐",
           // tab对应内容块
-          tab_con: "firstTab", 
+          tab_con: "firstTab",
         },
         {
           title: "热门",
@@ -60,22 +59,22 @@ export default {
     toggleTab(tab_con, currentClass) {
       // 选中tab内容块展示
       this.currentTab = tab_con;
-      // 选中tab样式 
-      this.currentClass = currentClass; 
-      this.$refs.box.style.transform = 'translateX('+(210*(this.currentClass))+'px)';
-      this.$refs.box.style.transition = '.5s';
+      // 选中tab样式
+      this.currentClass = currentClass;
+      this.$refs.box.style.transform =
+        "translateX(" + 200 * this.currentClass + "px)";
+      this.$refs.box.style.transition = ".5s";
     },
   },
   components: {
     firstTab,
     secondTab,
     thirdTab,
-
   },
 };
 </script>
 <style scoped>
-.tab{
+.tab {
   height: 70px;
 }
 .tab_button {
@@ -93,7 +92,7 @@ export default {
 .tab_button li.active {
   color: #2e2e2e;
   font-size: 36px;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 .tab_button .box {
   width: 32px;
@@ -102,7 +101,7 @@ export default {
   border-radius: 4px;
   position: absolute;
   top: 50px;
-  left: 150px;
+  left: 160px;
   cursor: pointer;
 }
 </style>

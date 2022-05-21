@@ -10,11 +10,13 @@
 <style lang="less">
 .app {
   height: 100%;
+  width: 100vw;
 }
 
 body {
   margin: 0px;
   padding: 0px;
+  width: 100vw;
 }
 
 html, body {
